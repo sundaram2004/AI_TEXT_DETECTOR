@@ -1,5 +1,5 @@
-python-3.10.13
 streamlit
 tensorflow
+transformers
 nltk
 huggingface_hub
