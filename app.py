@@ -9,7 +9,20 @@ import nltk
 nltk.download('punkt')
 from nltk.tokenize import sent_tokenize
 
-model = tf.keras.models.load_model('my_distilbert_classifier.keras')
+import keras
+from huggingface_hub import hf_hub_download
+
+# Download the model file
+model_path = hf_hub_download(
+    repo_id="sundaram07/keras-distilbert-classifier", # Replace with your username if different
+    filename="my_distilbert_classifier.keras",
+    repo_type="model"
+)
+
+# Load the model from the local path
+model = keras.saving.load_model(model_path)
+
+model.summary()
 
 
 
