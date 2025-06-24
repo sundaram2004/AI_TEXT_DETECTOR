@@ -2,3 +2,4 @@ streamlit
 transformers
 tensorflow
 nltk
+huggingface_hub
